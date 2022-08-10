@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
+        <script>
+            function GerarCódigoDeBarras(elementoInput){
+                /*A função JsBarcode não aceita string vazia*/
+                if(!elementoInput.value){
+                    elementoInput.value = 0;
+                }
+                JsBarcode('#codBarras', elementoInput.value);
+            }
+
+            document.addEventListener("keypress", function(e){
+        if (e. key ==='Enter')
+        var btn = document.querySelector('#press')
+        btn.click();
+    })
+    function login(idcode){
+        //"login ('txtuser')"
+        //User: <input type="text" name="user_name" id="txtuser"></input>
+        // Botão e caixa de texto
+        let enter = document.getElementById(idcode).value
+        if(enter ==""){
+        alert ("O nome não pode ficar vazio")
+    } else {
+        alert ("Ok")
+    }}
+
+        </script>
+    </head>
+    <style>
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number] ::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+    </style>
+    <body>
+        <div>
+            <label>Digite um valor</label>
+            <input id="code" type="number" onblur="GerarCódigoDeBarras(this)"/>
+        </div>
+        <div>
+            <button id="press" onclick="login('txtcode')">Aplicar</button>
+        </div>
+        <svg id="codBarras"></svg>
+        <svg id="codBarras"></svg>
+        <svg id="codBarras"></svg>
+        <svg id="codBarras"></svg>
+        <svg id="codBarras"></svg>
+        <svg id="codBarras"></svg>
+        <svg id="codBarras"></svg>
+        <svg id="codBarras"></svg>
+    </body>    
+</html>
